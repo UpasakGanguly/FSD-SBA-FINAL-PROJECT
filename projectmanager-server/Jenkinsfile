@@ -3,7 +3,9 @@ node{
         checkout([$class: 'GitSCM', branches: [[name: '*/fullstack']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '63da01e0-fa63-4adf-bd12-433b55f48a5d', url: 'https://github.com/UpasakGanguly/FSD-SBA-FINAL-PROJECT.git']]])
     }
     stage('Maven Build'){
-       def mvnHome = tool name: 'maven', type: 'maven'
+       withEnv(['MYTOOL_HOME=C:/Program Files/Apache Software Foundation/apache-maven-3.6.0/']) {
+           sh '$MYTOOL_HOME/bin/mvn install'
+          }
         sh "{mvnHome}/bin/mvn install"
         dir('/projectmanager-server') {
            sh "{mvnHome}/bin/mvn package docker build"
