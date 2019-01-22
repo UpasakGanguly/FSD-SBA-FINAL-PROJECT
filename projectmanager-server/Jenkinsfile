@@ -1,4 +1,7 @@
 node{
+    stage('SCM Checkout'){
+        checkout([$class: 'GitSCM', branches: [[name: '*/fullstack']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '63da01e0-fa63-4adf-bd12-433b55f48a5d', url: 'https://github.com/UpasakGanguly/FSD-SBA-FINAL-PROJECT.git']]])
+    }
     stage('Maven Build'){
        def mvnHome = tool name: 'maven', type: 'maven'
         sh "{mvnHome}/bin/mvn install"
