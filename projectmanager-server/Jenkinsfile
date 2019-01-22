@@ -2,7 +2,7 @@ node{
     stage('Maven Build'){
        def mvnHome = tool name: 'maven', type: 'maven'
         sh "{mvnHome}/bin/mvn install"
-        dir('C:\\Program Files\\Java\\jdk1.8.0_202') {
+        dir('/projectmanager-server') {
            sh "{mvnHome}/bin/mvn package docker build"
            }    
       }
