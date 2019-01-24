@@ -1,20 +1,21 @@
-# Project Manager - Final Certification - IIHT - Developer: Vignesh Suryah, Mani
+# FSD-SBA-FINAL-PROJECT:Project Manager
+<h2>Associate Name:Upasak Ganguly Cognizant ID:555194</h2>
+<h2>Please refer to the "docs" folder which contain the following sub-folders</h2>
+<ol>
+	<li>Application_Screenshots : This contains application screenshots of all screens.</li>
+	<li>MySQL Script : This contains table design and the DDL commands </li>
+	<li>Emma_Coverage_Reports : This contains the junit test cases, emma code coverage report and screenshots.</li>
+	<li>Load_Testing_Reports : This contains the screenshots of the jmeter execution on the rest end-point designed</li>
+	<li>Docker : This contains the docker commands and screenshots of the project docker image creation and execution.</li>
+	<li>Jenkins : This contains the screenshots of the jenkins pipeline creation,execution and the build report</li>
+</ol>
+<h3>Following are the projects which comprise of the full-stack project:Project Manager</h3>
+<ol>
+   <li><h4>projectmanager-server - The spring boot project using Rest API,hibernate etc running in the back-end </h4></li>
+   <li><h4>projectmanager-web - The angular project using HTML5,CS3,Bootstrap4 running in the front end</h4></li>
+</ol>	
+	
 
-<h2>Please refer "docs" folder for all the screenshots and other details</h2>
-<ul>
-	<li>folder "application_screenshots" : contains application screenshots of all screens. also has the screenshots of responsiveness in the screens.</li>
-	<li>folder "mysql" : table design, sql scripts, and few DML's </li>
-	<li>folder "postman_collection" : contains the api request/response for the end-points designed.</li>
-	<li>folder "junit-emma_coverage" : contains the junit test cases, emma code coverage report and screenshots.</li>
-	<li>folder "jmeter" : contains the screenshots of the jmeter execution on the end-point designed</li>
-	<li>folder "docker" : contains the commands and screenshots of the docker image creation and execution.</li>
-	<li>folder "jenkins" : contains the screenshots of the jenkins pipeline creation and execution. also contains build report</li>
-</ul>
-
-<h4>projectmanager-server - contains the REST end-points for application </h4>
-<h4>projectmanager-web - contains the angular 6 cli code for application</h4>
-
-Repo: https://github.com/vigneshsuryah/projectmanager-casestudy.git
 
 <b>Commands for final build:</b>
 <ul>
