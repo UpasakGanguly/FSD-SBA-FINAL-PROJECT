@@ -1,30 +1,35 @@
-# Project Manager - Final Certification - IIHT - Developer: Vignesh Suryah, Mani
-
-<h2>Please refer "docs" folder for all the screenshots and other details</h2>
+# FSD-SBA-FINAL-PROJECT:Project Manager
+<h2>Associate Name:Upasak Ganguly Cognizant ID:555194</h2>
+<h2>Please refer to the "docs" folder which contain the following sub-folders</h2>
+<ol>
+	<li>Application_Screenshots : This contains application screenshots of all screens.</li>
+	<li>MySQL Script : This contains table design and the DDL commands </li>
+	<li>Emma_Coverage_Reports : This contains the junit test cases, emma code coverage report and screenshots.</li>
+	<li>Load_Testing_Reports : This contains the screenshots of the jmeter execution on the rest end-point designed</li>
+	<li>Docker : This contains the docker commands and screenshots of the project docker image creation and execution.</li>
+	<li>Jenkins : This contains the screenshots of the jenkins pipeline creation,execution and the build report</li>
+</ol>
+<h3>Following are the projects which comprise of the full-stack project:Project Manager</h3>
+<ol>
+   <li><h4>"projectmanager-server" - The spring boot project using Rest API,hibernate etc running in the back-end </h4></li>
+   <li><h4>"projectmanager-web" - The angular project using HTML5,CS3,Bootstrap4 running in the front end</h4></li>
+</ol>
+<h3>Instructions for cloud lab VM:</h3>
 <ul>
-	<li>folder "application_screenshots" : contains application screenshots of all screens. also has the screenshots of responsiveness in the screens.</li>
-	<li>folder "mysql" : table design, sql scripts, and few DML's </li>
-	<li>folder "postman_collection" : contains the api request/response for the end-points designed.</li>
-	<li>folder "junit-emma_coverage" : contains the junit test cases, emma code coverage report and screenshots.</li>
-	<li>folder "jmeter" : contains the screenshots of the jmeter execution on the end-point designed</li>
-	<li>folder "docker" : contains the commands and screenshots of the docker image creation and execution.</li>
-	<li>folder "jenkins" : contains the screenshots of the jenkins pipeline creation and execution. also contains build report</li>
+	<li>The entire project code base is present in the path C:\Users\Admin\git\FSD-SBA-FINAL-PROJECT\ within the cloud lab VM.</li>
+	<li>8.	The full stack projectmanager jar file(post-build) is present in the path C:\Users\Admin\git\FSD-SBA-FINAL-PROJECT\projectmanager-server\target.</li>
+	<li>In order to run the application, open a command prompt(cmd.exe),navigate to the jar path mentioned above and run the command:java -jar jarname</li>
+	<li>Open a web browser(google chrome) and use the URL:https://localhost:8082 to access the application</li>
+</ul>
+<h3>Final Build Commands:</h3>
+<ul>
+<li>Maven: clean install -e [The UI code is build using "frontend-maven-plugin" and is packed inside the JAR artifacts itself. Refer projectmanager-web pom.xml](Command is mvn clean install)</li>
+<li>Docker: package docker:build[spotify "docker-maven-plugin" is used to create image in the remote docker. <dockerHost> configuration : pom.xml of projectmanager-server](Command is mvn package docker:build)</li>
 </ul>
 
-<h4>projectmanager-server - contains the REST end-points for application </h4>
-<h4>projectmanager-web - contains the angular 6 cli code for application</h4>
-
-Repo: https://github.com/vigneshsuryah/projectmanager-casestudy.git
-
-<b>Commands for final build:</b>
+<h3>Docker Execution Commands:</h3>
 <ul>
-<li>Maven build: clean install -e	[The UI code is build using "frontend-maven-plugin" and is packed inside the JAR artifacts itself. Refer projectmanager-web pom.xml]</li>
-<li>Docker build: package docker:build	[spotify "docker-maven-plugin" is used to create image in the remote docker. <dockerHost> configuration : pom.xml of projectmanager-server]</li>
-</ul>
-
-<b>Commands for Docker execution:</b>
-<ul>
-<li>dockerx run -p 8090:8085 vs-projectmanager-app-image:latest	[to start the image, we generated]</li>
+<li>dockerx run -p 8090:8085 projectmanager-image:latest	[to start the image, we generated]</li>
 <li>dockerx exec -it <container id> sh	[to check the below URL's are working in the curl]</li>
 </ul>	
 
@@ -36,24 +41,24 @@ Repo: https://github.com/vigneshsuryah/projectmanager-casestudy.git
 
 The above URLs can be accessed in the host machine with the Port Forwarding settings of VM toolbox [Settings -> Network -> Port Forwarding -> HOSTIP/HOSTPORT 127.0.0.1:8090 to GUESTIP/GUESTPORT :8090]
 
-<b>Commands for local development:</b>
+<h3>Local Deployment Commands:</h3>
 <ul>
 <li>spring boot in projectmanager-server folder: spring-boot:run</li>
 <li>angular ui in web folder of projectmanager-web: npm install -> npm start</li>
 </ul>
 
-<b>Jenkins:</b>
-<ul>
-<li>Branches to build: */integration</li>
+<h3>Jenkins:</h3>
+<ol>
+<li>Branches to build: */fullstack</li>
 <li>Script Path: projectmanager-server/Jenkinsfile</li>
-</ul>
+</ol>
 
-<b>Note: </b>
-<ul>
+<h3>Note: </h3>
+<ol>
 <li>Have used free hosting public MySQL database jdbc:mysql://sql12.freemysqlhosting.net:3306/dbname. This is to access database layer when deployed in docker (instead of setting mysql in docker).</li>
 <li>Refer dockerfile, application screenshot document in the repo folder.</li>
 <li>Refer mysql-script-to-execute.txt for the database DDL and DML's</li>
 <li>Before the maven build, change the port number in envioronment.prod.ts to change the port number in which the jar is gonna get deployed.</li>
-</ul>
+</ol>
 
 
