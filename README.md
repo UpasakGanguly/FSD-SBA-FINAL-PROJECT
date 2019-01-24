@@ -49,8 +49,8 @@ The above URLs can be accessed in the host machine with the Port Forwarding sett
 
 <h3>Jenkins:</h3>
 <ol>
-<li>Branches to build: */fullstack</li>
-<li>Script Path: projectmanager-server/Jenkinsfile</li>
+<li>GitHub Branches to build: */fullstack</li>
+<li>Jenkins script Path: projectmanager-server/Jenkinsfile</li>
 </ol>
 
 <h3>Note: </h3>
