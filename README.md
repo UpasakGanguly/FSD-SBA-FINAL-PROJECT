@@ -29,22 +29,20 @@
 
 <h3>Docker Execution Commands:</h3>
 <ul>
-<li>dockerx run -p 8090:8085 projectmanager-image:latest	[to start the image, we generated]</li>
-<li>dockerx exec -it <container id> sh	[to check the below URL's are working in the curl]</li>
+<li>docker run -p 8090:8085 projectmanager-image:latest	[This commands runs the to start the application container from the docker image]</li>
+<li>docker exec -it <container id> sh	[This commands executes the application container from the docker imageto to check whether the below URL's are working in the curl]</li>
 </ul>	
 
 <ul>
-<li>To check whether application loaded correctly: curl http://localhost:8090/test</li>
-<li>Service: curl http://localhost:8090/api/tasks</li>
-<li>UI Home page: curl http://localhost:8090/index.html</li>
+<li>The docker command to check whether application loaded correctly: curl http://localhost:8082/test</li>
+<li>The docker command to check the services: curl http://localhost:8082/api/tasks</li>
+<li>The docker command to display UI Home page: curl http://localhost:8082/index.html</li>
 </ul>	
-
-The above URLs can be accessed in the host machine with the Port Forwarding settings of VM toolbox [Settings -> Network -> Port Forwarding -> HOSTIP/HOSTPORT 127.0.0.1:8090 to GUESTIP/GUESTPORT :8090]
 
 <h3>Local Deployment Commands:</h3>
 <ul>
-<li>spring boot in projectmanager-server folder: spring-boot:run</li>
-<li>angular ui in web folder of projectmanager-web: npm install -> npm start</li>
+<li>Spring boot in projectmanager-server folder: spring-boot:run</li>
+<li>Angular ui in web folder of projectmanager-web: npm install -> npm start</li>
 </ul>
 
 <h3>Jenkins:</h3>
@@ -53,12 +51,12 @@ The above URLs can be accessed in the host machine with the Port Forwarding sett
 <li>Jenkins script Path: projectmanager-server/Jenkinsfile</li>
 </ol>
 
-<h3>Note: </h3>
+<h3>Notes: </h3>
 <ol>
-<li>Have used free hosting public MySQL database jdbc:mysql://sql12.freemysqlhosting.net:3306/dbname. This is to access database layer when deployed in docker (instead of setting mysql in docker).</li>
-<li>Refer dockerfile, application screenshot document in the repo folder.</li>
-<li>Refer mysql-script-to-execute.txt for the database DDL and DML's</li>
-<li>Before the maven build, change the port number in envioronment.prod.ts to change the port number in which the jar is gonna get deployed.</li>
+<li>The free hosting public MySQL database jdbc:mysql://sql12.freemysqlhosting.net:3306/dbname is usedto access database layer when deployed in docker (instead of setting mysql in docker).</li>
+<li>Please refer to the dockerfile, application screenshot document in the repo folder.</li>
+<li>Please refer to the mysql script for the database DDL</li>
+<li>Before the maven build, please change the port number in envioronment.prod.ts to change the port number in which the jar is gonna get deployed.</li>
 </ol>
 
 
